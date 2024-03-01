@@ -7,5 +7,6 @@ public class Workout
     public DateTime CreatedAt { get; set; }
 
     public User User;
+    public ICollection<Muscle> Muscles;
     public ICollection<WorkoutEntry> WorkoutEntries { get; set; }
 }
