@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${Database__PgUser}
+      - POSTGRES_PASSWORD=${Database__PgPass}
+      - POSTGRES_DB=${Database__DbName}
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 3030:80
+    environment:  
+      - PGADMIN_DEFAULT_EMAIL=${PgAdmin_Email}
+      - PGADMIN_DEFAULT_PASSWORD=${PgAdmin_Password}

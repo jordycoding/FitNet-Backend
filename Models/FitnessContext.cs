@@ -5,7 +5,7 @@ namespace FitNet.Models;
 
 public class FitnessContext : DbContext
 {
-    public FitnessContext(DbContextOptions<FitnessContext> options) : base(options) { }
+    public FitnessContext(DbContextOptions<FitnessContext> option) : base(option) { }
     public DbSet<Exercise> Exercises { get; set; }
     public DbSet<Workout> Workouts { get; set; }
     public DbSet<WorkoutEntry> WorkoutEntries { get; set; }

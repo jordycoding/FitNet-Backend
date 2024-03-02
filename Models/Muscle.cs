@@ -7,4 +7,5 @@ public class Muscle
 
     public ICollection<Workout>? Workouts;
     public ICollection<MuscleGroup>? MuscleGroups;
+    public ICollection<Exercise>? Exercises;
 }
